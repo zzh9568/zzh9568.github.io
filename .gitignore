@@ -1,0 +1,8 @@
+.edge-preview-profile/
+preview-home.png
+preview-home-latest.png
+.jekyll-cache/
+_site/
+.sass-cache/
+~$*.docx
+.DS_Store
