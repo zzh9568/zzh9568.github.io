@@ -15,7 +15,6 @@
 | 页面样式、颜色、卡片、按钮、排版 | `assets/css/main.scss` |
 | 页脚文字 | `_includes/footer.html` |
 | 侧边栏头像显示逻辑 | `_includes/author-profile.html` |
-| 本地静态预览页面 | `preview.html` |
 
 ## 首页怎么改
 
@@ -39,7 +38,7 @@ _pages/about.md
 3. 找到外面的 `<!--` 和 `-->`
 4. 删除这两个注释标记即可恢复显示
 
-`preview.html` 里也保留了一份同样的注释块，用来本地预览。
+如果你以后保留本地草稿预览文件，也可以在那里同步恢复；公开发布仓库里不保留预览页。
 
 ## Research 页面怎么改
 
@@ -102,7 +101,6 @@ documents/CV.pdf
 
 - `_pages/about.md`
 - `_data/navigation.yml`
-- `preview.html`，如果你还想让本地静态预览也能点开
 
 ## 邮箱、Scholar、ORCID、GitHub 怎么改
 
@@ -166,28 +164,7 @@ assets/css/main.scss
 - 侧边栏文字头像
 - 响应式布局
 
-## 本地预览
-
-当前电脑没有 Ruby / Bundler，所以暂时不能直接运行完整 Jekyll 本地服务。
-
-可以先打开这个文件看静态视觉预览：
-
-```text
-preview.html
-```
-
-注意：`preview.html` 只是本地预览，不是正式网页源码的一部分。它已经在 `_config.yml` 里排除，GitHub Pages 不会发布它。
-
-生成的截图文件：
-
-```text
-preview-home.png
-preview-home-latest.png
-```
-
-也都不会发布。
-
-## 完整本地 Jekyll 预览
+## 本地 Jekyll 预览
 
 如果以后安装了 Ruby 和 Bundler，可以在项目目录运行：
 
