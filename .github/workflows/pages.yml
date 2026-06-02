@@ -30,7 +30,7 @@ jobs:
           cp index.html _site/index.html
           cp research/index.html _site/research/index.html
           cp documents/CV.pdf _site/documents/CV.pdf
-          cp documents/Home.pdf _site/documents/Home.pdf
+          cp documents/CV.pdf _site/documents/CV.pdf
           cp robots.txt _site/robots.txt
           cp sitemap.xml _site/sitemap.xml
           cp googleae605f872d19c047.html _site/googleae605f872d19c047.html
