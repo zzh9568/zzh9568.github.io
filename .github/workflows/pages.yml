@@ -30,6 +30,7 @@ jobs:
           cp index.html _site/index.html
           cp research/index.html _site/research/index.html
           cp documents/CV.pdf _site/documents/CV.pdf
+          cp documents/Home.pdf _site/documents/Home.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
