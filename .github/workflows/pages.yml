@@ -33,6 +33,7 @@ jobs:
           cp documents/Home.pdf _site/documents/Home.pdf
           cp robots.txt _site/robots.txt
           cp sitemap.xml _site/sitemap.xml
+          cp googleae605f872d19c047.html _site/googleae605f872d19c047.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
