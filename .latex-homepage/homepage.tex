@@ -1,0 +1,136 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper, top=1.4cm, bottom=1.2cm, left=1.6cm, right=1.6cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{tikz}
+
+% ===== Colors =====
+\definecolor{primary}{HTML}{1a3a5c}
+\definecolor{accent}{HTML}{2e7d9c}
+\definecolor{lightbg}{HTML}{f4f6f9}
+\definecolor{muted}{HTML}{555555}
+\definecolor{linecolor}{HTML}{d0d7e0}
+
+% ===== Hyperref =====
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdftitle={Zhihao Zhu - Homepage},
+  pdfauthor={Zhihao Zhu}
+}
+
+% ===== No page numbers =====
+\pagestyle{empty}
+
+% ===== Section divider =====
+\newcommand{\sectionline}{\par\vspace{4pt}{\color{linecolor}\hrule height 0.6pt}\par\vspace{6pt}}
+
+% ===== Paper entry macro =====
+\newcommand{\paperentry}[4]{%
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+    \fill[accent] (0,0) rectangle (2.5pt,-18pt);
+  \end{tikzpicture}~%
+  \begin{minipage}[t]{\dimexpr\linewidth-12pt}
+    {\small\textbf{#1}}\par
+    {\small\color{muted}#2}\par
+    {\small\color{accent}\textbf{#3}}~{\small\color{muted}#4}
+  \end{minipage}\par
+  \vspace{5pt}
+}
+
+\begin{document}
+
+% ==================== HEADER ====================
+\begin{tcolorbox}[
+  enhanced,
+  colback=primary,
+  colframe=primary,
+  boxrule=0pt,
+  arc=0pt,
+  left=0pt, right=0pt, top=10pt, bottom=10pt,
+  boxsep=0pt,
+  width=\linewidth+3.2cm,
+  enlarge left by=-1.6cm,
+  enlarge right by=-1.6cm,
+]
+\begin{center}
+  {\fontsize{26}{30}\selectfont\color{white}\textbf{Zhihao Zhu}}\\[4pt]
+  {\normalsize\color{white!90}Postdoctoral Fellow at HKUST}\\[8pt]
+  {\color{white!80}\small
+    \faIcon{envelope}~\href{mailto:zhihaozhu@ust.hk}{zhihaozhu@ust.hk} \quad
+    \faIcon{github}~\href{https://github.com/zzh9568}{GitHub} \quad
+    \faIcon{graduation-cap}~\href{https://scholar.google.com/citations?user=745H-yoAAAAJ}{Google Scholar} \quad
+    \faIcon{orcid}~\href{https://orcid.org/0000-0001-5814-1939}{ORCID}
+  }
+\end{center}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+% ==================== EDUCATION ====================
+\textbf{\normalsize\color{primary}\faIcon{university}~Experience}
+\sectionline
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=0pt, parsep=0pt]
+  \item {\small\textbf{Postdoctoral Fellow}}, Hong Kong University of Science and Technology, advised by Prof.~Yi Yang.
+  \item {\small\textbf{Ph.D. in Computer Science}}, University of Science and Technology of China (2025), advised by Prof.~Defu Lian.
+  \item {\small\textbf{Bachelor's degree in Computer Science}}, Fuzhou University (2020).
+\end{itemize}
+
+\vspace{4pt}
+
+% ==================== RESEARCH FOCUS ====================
+\textbf{\normalsize\color{primary}\faIcon{microscope}~Research Focus}
+\sectionline
+{\small I study trustworthy AI and large language models, focusing on auditing, privacy, and training data exposure.}
+
+\vspace{4pt}
+
+% ==================== RESEARCH INTERESTS ====================
+\begin{multicols}{2}
+\noindent\textbf{\small\color{primary}\faIcon{shield-alt}~Trustworthy AI}\\[2pt]
+{\small Auditing model behavior, data revocation, membership inference, and model stealing risks in recommender and graph learning systems.}
+
+\columnbreak
+
+\noindent\textbf{\small\color{primary}\faIcon{brain}~Large Language Models}\\[2pt]
+{\small Detecting training data exposure and understanding privacy risks in language and vision-language models, emphasizing pre-training data identification and leakage measurement.}
+\end{multicols}
+
+\vspace{4pt}
+
+% ==================== PUBLICATIONS ====================
+\textbf{\normalsize\color{primary}\faIcon{book-open}~Business \& Interdisciplinary Journals}
+\sectionline
+
+\paperentry{Forget Me If You Can: Auditing User Data Revocation in Recommendation Systems}{Zhihao Zhu, Yi Yang, Yangyang Fan, Defu Lian}{Information Systems Research}{2026}
+
+\paperentry{HoneyImage: Verifiable, Harmless, and Stealthy Dataset Ownership Verification for Image Models}{Zhihao Zhu, Jiale Han, Yi Yang}{Management Information Systems Quarterly}{Major Revision}
+
+\paperentry{Revealing Training Data Exposure in Vision-Language Large Models via Parameter Gradients}{Zhihao Zhu, Hongyi Tang, Yi Yang, Ahmed Abbasi}{Nature Communications}{Major Revision}
+
+\paperentry{RecShield: Output-Level Attribute Unlearning in Recommender Systems}{Zhihao Zhu, Yi Yang}{Information Systems Research}{Under Review}
+
+\paperentry{GraphMSA: Stress Testing Graph Classification Services Against Model Stealing Attacks}{Zhihao Zhu, Yi Yang, Chenwang Wu, Defu Lian}{INFORMS Journal on Computing}{Under Review}
+
+\vspace{4pt}
+
+\textbf{\normalsize\color{primary}\faIcon{microchip}~AI Conferences and Journals}
+\sectionline
+
+\paperentry{TDDBench: A Benchmark for Training Data Detection}{Zhihao Zhu, Yi Yang, Defu Lian}{International Conference on Learning Representations}{2025}
+
+\paperentry{Identifying Pre-training Data in LLMs: A Neuron Activation-Based Detection Framework}{Hongyi Tang*, Zhihao Zhu*, Yi Yang. Equal contribution.}{Conference on Empirical Methods in Natural Language Processing}{2025}
+
+\paperentry{Membership Inference Attacks against Sequential Recommender Systems}{Zhihao Zhu, Chenwang Wu, Rui Fan, Defu Lian, Enhong Chen}{The Web Conference}{2023}
+
+\paperentry{Resisting Graph Adversarial Attack via Cooperative Homophilous Augmentation}{Zhihao Zhu, Chenwang Wu, Min Zhou, Hao Liao, Defu Lian, Enhong Chen}{European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases}{2022}
+
+\end{document}
