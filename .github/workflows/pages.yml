@@ -26,10 +26,11 @@ jobs:
           enablement: true
       - name: Build static artifact
         run: |
-          mkdir -p _site/research _site/documents
+          mkdir -p _site/research _site/documents _site/images
           cp index.html _site/index.html
           cp research/index.html _site/research/index.html
           cp documents/CV.pdf _site/documents/CV.pdf
+          cp images/zzh.png _site/images/zzh.png
           cp documents/CV.pdf _site/documents/CV.pdf
           cp robots.txt _site/robots.txt
           cp sitemap.xml _site/sitemap.xml

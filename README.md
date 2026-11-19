@@ -84,24 +84,7 @@ python scripts\make_cv.py
 
 ## 头像照片
 
-当前页面使用 `ZZ` 文字头像，没有公开真实照片。
-
-如果以后要添加头像：
-
-1. 把照片放到 `images/`，例如 `images/profile.jpg`
-2. 在 `index.html` 和 `research/index.html` 里搜索：
-
-```html
-<div class="avatar">ZZ</div>
-```
-
-3. 替换成：
-
-```html
-<img class="avatar" src="/images/profile.jpg" alt="Zhihao Zhu">
-```
-
-可能还需要在 CSS 里给 `.avatar` 保持圆形样式。
+首页和 Research 页面使用 `images/zzh.png` 作为圆形头像。更换照片时，用新图片覆盖该文件即可。
 
 ## 邮箱、Scholar、ORCID、GitHub 怎么改
 
@@ -132,8 +115,10 @@ research/index.html
 - `index.html`
 - `research/index.html`
 - `documents/CV.pdf`
+- `images/zzh.png`
+- `robots.txt`、`sitemap.xml` 和 Google 验证文件
 
-所以公开网页只包含这几个页面/文件。
+所以公开网页只包含这些页面和文件。
 
 ## 上传前检查
 
